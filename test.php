@@ -1,7 +1,7 @@
 <?php
 
-    pa($_SERVER,1);
-	pa($_SERVER);
+    //pa($_SERVER,1);
+	//pa($_SERVER);
 	pa(filter_list());
 	
 	echo date('Y-m-d',strtotime('05-Jan-2013 00:00:00')).'asfasd----';
