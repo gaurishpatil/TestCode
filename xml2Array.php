@@ -19,6 +19,7 @@ $string='<monitor>
 echo 'First Solution:=><br />';
 $xml = new SimpleXMLElement($string);
 pa($xml);
+
 echo 'Second Solution:=><br />';
 function xml2array($xmlObject) {
   $arr = array();

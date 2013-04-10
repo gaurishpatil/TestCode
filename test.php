@@ -14,8 +14,7 @@
 	$temp = false;
 	var_dump(isset($temp));
 
-    $date= new DateTime('now');
-    echo 'Today"s Date' .$date;
+    
 	$foo = 5 + "10 Little Piggies"; // $foo is integer (15)
 	echo $foo.'<br />';
 	$foo = 5 + "456 Small Pigs";     // $foo is integer (15)
@@ -63,3 +62,15 @@
     $obj= new B;
     $obj->display();
    // $obj->callParentDisplay();
+   
+   
+   echo 'Server Variables:- '.$_SERVER['REMOTE_USER'];
+   
+   function foo()
+	{
+		$numargs = func_num_args();
+		$numargs = func_get_args();
+		echo "Number of arguments: $numargs\n";
+	}
+
+		foo(1, 2, 3);   

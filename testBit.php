@@ -1,5 +1,7 @@
 <?php
 
+	error_reporting(-1);
+	require_once('testInclude.php');	
     if(mysql_connect('192.168.1.2','admin','admin'))
     {
       mysql_select_db('testdb');
@@ -14,4 +16,5 @@
 		
       }
     }
+	require_once('testInclude.php');		
 ?>
