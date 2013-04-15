@@ -2,20 +2,14 @@
 // This is only an example, the numbers below will
 // differ depending on your system
 
-echo convert(memory_get_usage(true)).'<br>'; // 123 kb
+echo memory_get_usage() . "<br>"; // 36640
 
 $a = str_repeat("Hello", 4242);
 
-echo convert(memory_get_usage(true)).'<br>'; // 123 kb
+echo memory_get_usage() . "<br>"; // 57960
 
 unset($a);
 
-echo convert(memory_get_usage(true)).'<br>'; // 123 kb
-
-function convert($size)
-{
-    $unit=array('b','kb','mb','gb','tb','pb');
-    return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
-}
+echo memory_get_usage() . "<br>"; // 36744
 
 ?>
