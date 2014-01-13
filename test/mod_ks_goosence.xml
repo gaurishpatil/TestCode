@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>MOD_KS_GOOSENCE</name>
+	<author>KISS Software</author>
+	<authorEmail>info@kiss-software.de</authorEmail>
+	<authorUrl>www.kiss-software.de</authorUrl>
+	<creationDate>13.08.2013</creationDate>
+	<copyright>This module is released under the GNU/GPL License</copyright> 
+	<version>2.5.0</version>
+	<description>MOD_KS_GOOSENCE_DESC</description>
+	<files>
+		<filename module="mod_ks_goosence">mod_ks_goosence.php</filename>
+		<filename>index.html</filename>
+		<folder>fields</folder>
+		<folder>tmpl</folder>	
+	</files>
+	<media folder="media" destination="mod_ks_goosence">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>	
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_ks_goosence.ini</language>
+		<language tag="en-GB">language/en-GB.mod_ks_goosence.sys.ini</language>
+		<language tag="de-DE">language/de-DE.mod_ks_goosence.ini</language>
+		<language tag="de-DE">language/de-DE.mod_ks_goosence.sys.ini</language>
+	</languages>
+
+	<config>
+	<fields name="params" addfieldpath="/modules/mod_ks_goosence/fields" >
+		<fieldset name="basic">
+		<field name="ad_userlevel" type="list" default="text_image" label="MOD_KS_GOOSENCE_FIELD_USERLEVEL_LABEL" description="MOD_KS_GOOSENCE_FIELD_USERLEVEL_DESC">
+			<option value="1">MOD_KS_GOOSENCE_FIELD_USERLEVEL_1_LABEL</option>
+			<option value="2">MOD_KS_GOOSENCE_FIELD_USERLEVEL_2_LABEL</option>
+			<option value="3">MOD_KS_GOOSENCE_FIELD_USERLEVEL_3_LABEL</option>
+		</field>
+		<field name="pub_client" type="text" default="pub-XXXXXXXXXXXXXX" label="MOD_KS_GOOSENCE_FIELD_CLIENTID_LABEL" description="MOD_KS_GOOSENCE_FIELD_CLIENTID_DESC" />
+		<field name="google_ad_slot" type="text" default="XXXXXX" label="Google Ad Slot" description="Google Ad Slot" />
+		<field name="ad_format" type="list" default="728 x 90_as" label="MOD_KS_GOOSENCE_FIELD_ADFORMAT_LABEL" description="MOD_KS_GOOSENCE_FIELD_ADFORMAT_DESC">
+			<option value="728x90_as"> 728 x 90 Leaderboard </option> 
+			<option value="468x60_as"> 468 x 60 Banner </option> 
+			<option value="234x60_as"> 234 x 60 Half Banner </option> 
+			<option value="125x125_as"> 125 x 125 Button </option> 
+			<option value="120x600_as"> 120 x 600 Skyscraper </option> 
+			<option value="160x600_as"> 160 x 600 Wide Skyscraper </option> 
+			<option value="180x150_as"> 180 x 150 Small Rectangle </option> 
+			<option value="120x240_as"> 120 x 240 Vertical Banner </option>       
+			<option value="200x200_as"> 200 x 200 Square </option> 
+			<option value="250x250_as"> 250 x 250 Square </option> 
+			<option value="300x250_as"> 300 x 250 Medium Rectangle </option> 			
+			<option value="336x280_as"> 336 x 280 Large Rectangle </option> 
+			<option value="180x150_as"> 180 x 150 Small Rectangle </option>		
+		</field>
+		<field name="ad_channel" type="text" default="" label="MOD_KS_GOOSENCE_FIELD_ADCHANNEL_LABEL" description="MOD_KS_GOOSENCE_FIELD_ADCHANNEL_DESC" />
+		<field name="ad_type" type="list" default="text_image" label="MOD_KS_GOOSENCE_FIELD_ADTYPE_LABEL" description="MOD_KS_GOOSENCE_FIELD_ADTYPE_DESC">
+			<option value="text_image">MOD_KS_GOOSENCE_FIELD_ADTYPE_1_LABEL</option>
+			<option value="text">MOD_KS_GOOSENCE_FIELD_ADTYPE_2_LABEL</option>
+			<option value="image">MOD_KS_GOOSENCE_FIELD_ADTYPE_3_LABEL</option>
+			<option value="">MOD_KS_GOOSENCE_FIELD_DEFAULT_LABEL</option>				
+		</field>
+		<field name="color_border" type="text" default="000000" label="MOD_KS_GOOSENCE_FIELD_BORDER_COLOR_LABEL" description="MOD_KS_GOOSENCE_FIELD_BORDER_COLOR_DESC" />
+		<field name="color_bg" type="text" default="FFFFFF" label="MOD_KS_GOOSENCE_FIELD_BACKGROUND_COLOR_LABEL" description="MOD_KS_GOOSENCE_FIELD_BACKGROUND_COLOR_DESC" />
+		<field name="color_link" type="text" default="0000FF" label="MOD_KS_GOOSENCE_FIELD_LINK_COLOR_LABEL" description="MOD_KS_GOOSENCE_FIELD_LINK_COLOR_LABEL" />
+		<field name="color_url" type="text" default="008000" label="MOD_KS_GOOSENCE_FIELD_URL_COLOR_LABEL" description="MOD_KS_GOOSENCE_FIELD_URL_COLOR_LABEL" />
+		<field name="color_text" type="text" default="333333" label="MOD_KS_GOOSENCE_FIELD_TEXT_COLOR_LABEL" description="MOD_KS_GOOSENCE_FIELD_TEXT_COLOR_LABEL" />
+		<field name="ui_features" type="list" default="" label="MOD_KS_GOOSENCE_FIELD_EDGESTYLE_LABEL" description="MOD_KS_GOOSENCE_FIELD_EDGESTYLE_DESC">
+			<option value="">MOD_KS_GOOSENCE_FIELD_DEFAULT_LABEL</option>
+			<option value="rc:0">MOD_KS_GOOSENCE_FIELD_EDGESTYLE_1_LABEL</option>
+			<option value="rc:6">MOD_KS_GOOSENCE_FIELD_EDGESTYLE_2_LABEL</option>
+			<option value="rc:10">MOD_KS_GOOSENCE_FIELD_EDGESTYLE_3_LABEL</option>				
+		</field>	 
+	 </fieldset>
+		
+		<fieldset name="advanced">
+			<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			<field name="moduleclass_sfx" type="text" size="40" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+				<option value="1">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+			</field>
+			<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			<field name="cachemode" type="hidden" default="static">
+				<option value="static"></option>
+			</field>				
+		</fieldset>
+	</fields>	
+	</config>
+</extension>
