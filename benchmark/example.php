@@ -1,6 +1,6 @@
 <?php
 
-require 'Benchmark.php';
+require 'benchmark.php';
 
 // a place to store the result of each test
 $results = array();
@@ -30,8 +30,8 @@ function test4()
  * @param function/test
  * @param allowed time to run
  */
-$results[] = Benchmark::run_test('My Version', 'test3', 10);
-$results[] = Benchmark::run_test('Cake\'s Version', 'test4', 10);
+$results[] = Benchmark::run_test('My Version', 'test_1', 10);
+$results[] = Benchmark::run_test('Cake\'s Version', 'test_2', 10);
 
 foreach( $results as $result )
   echo $result;
