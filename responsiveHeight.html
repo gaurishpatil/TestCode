@@ -1,0 +1,25 @@
+<style>
+.box{
+	position: relative;
+	width: 50%;		/* desired width */
+	background-color: red;
+}
+.box:before{
+	content: "";
+	display: block;
+	//padding-top: 100%; /* ratio of 1:1*/
+	padding-top: 75%; /* ratio of 4:3*/
+}
+.content{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: blue;
+}
+</style>
+
+<div class='box'>
+	<div class='content'>Aspect ratio of 1:1</div>
+</div>
