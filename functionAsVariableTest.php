@@ -1,12 +1,14 @@
 <?php
 
-$foo = function($var) 
+$foo = function($var)
 {
     $b= "Hello $var";
 	return $b;
 };
 $c= $foo('gaurish'); 
 echo $c;
+
+
 class test {
 	public function demo()
 	{
@@ -16,4 +18,4 @@ class test {
 $test= new test;
 $test->demo();
 
-?> 
+?>
